@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all linear .2s;
+}
+
+:root {
+    --primary-white: #FFFAFA;
+
+    --primary-gray: #E0E0E0;
+
+    --primary-black: #242424;
+    --secondary-black: #333333;
+
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding: 7rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: var(--primary-black);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--secondary-black);
+    border-radius: 2px;
+}
+
+
+body {
+    font-family: 'Baloo Bhaijaan 2', cursive;
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    color: var(--secondary-black);
+
+    border-radius: .5rem;
+
+    cursor: pointer;
+}
+
+.btn:hover {
+    letter-spacing: .2rem;
+}
+
+main {
+    height: 100vh;
+    background-image: url("../img/main.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.header {
+    padding: 1.5rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .logo {
+    font-weight: 500;
+    font-size: 2.5rem;
+    color: var(--primary-white);
+
+    display: flex;
+    align-items: center;
+}
+
+.header .logo .logo-text {
+    margin-left: .5rem;
+}
+
+.header .search-form {
+    background: #e0e0e02d;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    height: 4.5rem;
+    width: 50rem;
+}
+
+.header .search-form input {
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-transform: none;
+    color: var(--primary-black);
+    padding: 1rem;
+}
+
+.header .search-form label {
+    font-size: 2rem;
+    margin-right: 1.5rem;
+    color: var(--secondary-black);
+
+    cursor: pointer;
+}
+
+.header .search-form label:hover {
+    color: #91CB82;
+}
+
+.header .icons div {
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    font-size: 2rem;
+    border-radius: .5rem;
+    margin-left: .5rem;
+    background: #e0e0e01c;
+    color: var(--secondary-black);
+    text-align: center;
+    
+    cursor: pointer;
+}
+
+.header .icons div:hover {
+    background-color: var(--primary-gray);
+}
+
+#search-btn {
+    display: none;
+}
+
+.header .navbar {
+    position: absolute;
+    top: 15%;
+    right: 7%;
+    background: #e0e0e01c;
+    border-radius: .5rem;
+    width: 25rem;
+
+    transform: scale(0);
+    transform-origin: top right;
+}
+
+.header .navbar.active {
+    transform: scale(1);
+}
+
+.header .navbar a {
+    display: block;
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: var(--secondary-black);
+    border-radius: .5rem;
+}
+
+.header .navbar a:hover {
+    background: #e0e0e04b;
+}
+
+.header .login-form {
+    position: absolute;
+    top: 15%;
+    right: 7%;
+    background: #e0e0e01c;
+    border-radius: .5rem;
+    width: 35rem;
+    padding: 2rem;
+
+    transform: scale(0);
+    transform-origin: top right;
+}
+
+.header .login-form.active {
+    transform: scale(1);
+}
+
+.header .login-form .inputBox {
+    margin-bottom: 1rem;
+}
+
+.header .login-form .inputBox span {
+    font-size: 1.7rem;
+    color: var(--secondary-black);
+}
+
+.header .login-form .inputBox input {
+    font-size: 1.5rem;
+    color: var(--primary-black);
+    border-radius: .5rem;
+    padding: 1rem;
+    background: #e0e0e02d;
+    width: 100%;
+    text-transform: none;
+    margin: .5rem 0;
+}
+
+.header .login-form .remember {
+    display: flex;
+    align-items: center;
+    gap: .5rem 0;
+    padding: .5rem 0;
+}
+
+.header .login-form .remember label {
+    color: var(--secondary-black);
+    margin-left: .5rem;
+}
+
+.header .login-form .btn {
+    width: 100%;
+}
+
+
+
+
+/* Media Queries */
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    .header {
+        padding: 1.5rem 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header .navbar {
+        right: 2rem;
+    }
+
+    .header .login-form {
+        right: 2rem;
+    }
+
+    #search-btn {
+        display: inline-block;
+    }
+
+    .header .search-form {
+        position: absolute;
+        top: 15%;
+        right: 2rem;
+        width: 90%;
+
+        right: 2rem;
+
+        transform: scale(0);
+        transform-origin: top right;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}

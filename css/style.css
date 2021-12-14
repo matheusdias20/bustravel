@@ -118,7 +118,7 @@ main {
 }
 
 .header .search-form label:hover {
-    color: #91CB82;
+    color: var(--primary-white);
 }
 
 .header .icons div {
@@ -147,7 +147,7 @@ main {
     position: absolute;
     top: 15%;
     right: 7%;
-    background: #e0e0e01c;
+    background-color: var(--primary-white);
     border-radius: .5rem;
     width: 25rem;
 
@@ -176,7 +176,7 @@ main {
     position: absolute;
     top: 15%;
     right: 7%;
-    background: #e0e0e01c;
+    background-color: var(--primary-white);
     border-radius: .5rem;
     width: 35rem;
     padding: 2rem;
@@ -225,14 +225,162 @@ main {
     width: 100%;
 }
 
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 15rem;
+}
+
+.home .left {
+    margin-left: 12rem;
+}
+
+.home .left h1 {
+    font-size: 8rem;
+    line-height: 1.2;
+    max-width: 60%;
+
+    color: var(--primary-white);
+}
+
+.home .left p {
+    font-size: 1.5rem;
+    max-width: 40%;
+
+    color: var(--primary-white);
+}
 
 
+.home .right {
+    display: flex;
+
+    height: 200px;
+}
+
+.home .right .text-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    padding-right: 2rem;
+    padding-left: 2rem;
+    background-color: #e0e0e01c;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+    color: var(--primary-white);
+}
+
+.home .right .text-right h3 {
+    font-size: 2rem;
+}
+
+.home .right .text-right i {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.home .right .text-right i:hover {
+    color: var(--primary-black);
+}
+
+.home .right .image-right img{
+    height: 100%;
+}
+
+/* Form Container  */
+
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 10rem;
+}
+
+.form-container form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+
+    background-color: #e0e0e02d;
+    border-radius: .5rem;
+    padding: 2rem;
+
+    align-items: center;
+}
+
+.form-container form .inputBox {
+    flex: 1 1 23rem;
+}
+
+.form-container form .inputBox span {
+    font-size: 1.7rem;
+    color: var(--primary-white);
+}
+
+.form-container form .inputBox input {
+    font-size: 1.5rem;
+    color: var(--primary-black);
+    background-color: #e0e0e04b;
+
+    border-radius: .5rem;
+    margin: .5rem 0;
+
+    width: 100%;
+    padding: 1rem;
+
+}
+
+.form-container form .inputBox input::placeholder {
+    color: var(--primary-black);
+}
+
+.form-container .btn-form {
+    margin-top: 2.7rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    color: var(--secondary-black);
+
+    border-radius: .5rem;
+
+    cursor: pointer;
+}
+
+.form-container .btn-form:hover {
+    background-color: #91CB82;
+    color: var(--primary-white);
+}
 
 /* Media Queries */
+
+@media (max-width: 1250px) {
+    .home .right .text-right h3 {
+        font-size: 1.5rem;
+    }
+} 
+
+@media (max-width: 1150px) {
+    .home .left h1 {
+        font-size: 6rem;
+    }
+
+    .home .right .text-right h3 {
+        font-size: 1rem;
+    }
+} 
 
 @media (max-width: 991px) {
     html {
         font-size: 55%;
+    }
+
+    .home .left h1 {
+        font-size: 5rem;
     }
 
     .header {
@@ -241,6 +389,13 @@ main {
 }
 
 @media (max-width: 768px) {
+
+    .home .left h1 {
+        font-size: 4rem;
+    }
+
+
+
     .header .navbar {
         right: 2rem;
     }
@@ -249,13 +404,24 @@ main {
         right: 2rem;
     }
 
+    .home .right {
+        margin-top: 2rem;
+        height: 200px;
+
+        justify-content: center;
+    }
+
+    #search-btn {
+        display: inline-block;
+    }
+
     #search-btn {
         display: inline-block;
     }
 
     .header .search-form {
         position: absolute;
-        top: 15%;
+        top: 10%;
         right: 2rem;
         width: 90%;
 
@@ -264,10 +430,51 @@ main {
         transform: scale(0);
         transform-origin: top right;
     }
+
+    .header .search-form.active {
+        transform: scale(1);
+    }
+
+}
+
+@media (max-width: 650px) {
+    .home {
+        flex-direction: column;
+    }
+
+    .home .left {
+        margin-left: 0;
+    }
+
+    .home .left p {
+        text-align: center;
+    }
+
+    .home .left h1,
+    .home .left p {
+        max-width: 100%;
+    }
+
+    .home .right .image-right img{
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
 }
 
 @media (max-width: 450px) {
     html {
         font-size: 50%;
+    }
+
+    .home .left h1 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 320px) {
+    main {
+       background-image: 130%;
+       overflow-x: hidden;
     }
 }

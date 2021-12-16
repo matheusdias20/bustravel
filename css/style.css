@@ -45,6 +45,15 @@ html::-webkit-scrollbar-thumb {
 
 body {
     font-family: 'Baloo Bhaijaan 2', cursive;
+    background-color: #444c54;
+}
+
+.heading {
+    text-align: center;
+    margin-top: 4rem;
+    padding-bottom: 2rem;
+    color: var(--primary-white);
+    font-size: 4rem;
 }
 
 .btn {
@@ -52,8 +61,8 @@ body {
     display: inline-block;
     padding: .8rem 3rem;
     font-size: 1.7rem;
-    color: var(--secondary-black);
-
+    color: var(--primary-white);
+    background-color: #0f1313;
     border-radius: .5rem;
 
     cursor: pointer;
@@ -65,9 +74,9 @@ body {
 
 main {
     height: 100vh;
-    background-image: url("../img/main.png");
-    background-size: cover;
+    background-image: url("../img/main2.jpg");
     background-repeat: no-repeat;
+    background-size: cover;
 
 }
 
@@ -92,7 +101,7 @@ main {
 }
 
 .header .search-form {
-    background: #e0e0e02d;
+    background: #e0e0e06b;
     border-radius: .5rem;
     display: flex;
     align-items: center;
@@ -106,6 +115,7 @@ main {
     background: none;
     text-transform: none;
     color: var(--primary-black);
+    font-weight: 600;
     padding: 1rem;
 }
 
@@ -128,7 +138,7 @@ main {
     font-size: 2rem;
     border-radius: .5rem;
     margin-left: .5rem;
-    background: #e0e0e01c;
+    background: #e0e0e06b;
     color: var(--secondary-black);
     text-align: center;
     
@@ -145,7 +155,7 @@ main {
 
 .header .navbar {
     position: absolute;
-    top: 15%;
+    top: 12%;
     right: 7%;
     background-color: var(--primary-white);
     border-radius: .5rem;
@@ -266,7 +276,7 @@ main {
 
     padding-right: 2rem;
     padding-left: 2rem;
-    background-color: #e0e0e01c;
+    background: #e0e0e04b;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 
@@ -306,7 +316,7 @@ main {
     gap: 1rem;
     align-items: center;
 
-    background-color: #e0e0e02d;
+    background-color: #e0e0e03d;
     border-radius: .5rem;
     padding: 2rem;
 
@@ -324,9 +334,8 @@ main {
 
 .form-container form .inputBox input {
     font-size: 1.5rem;
-    color: var(--primary-black);
-    background-color: #e0e0e04b;
-
+    color: var(--primary-white);
+    background-color: #e0e0e03a;
     border-radius: .5rem;
     margin: .5rem 0;
 
@@ -344,7 +353,8 @@ main {
     display: inline-block;
     padding: 1rem 3rem;
     font-size: 1.7rem;
-    color: var(--secondary-black);
+    color: var(--primary-white);
+    background-color: #0f1313;
 
     border-radius: .5rem;
 
@@ -356,7 +366,90 @@ main {
     color: var(--primary-white);
 }
 
+/* Packages */
+.packages .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+    margin: 0 2rem;
+}
+
+.packages .box-container .box {
+    background: #e0e0e03a;
+    border-radius: .5rem;
+}
+
+.packages .box-container .box .image {
+    height: 25rem;
+    width: 100%;
+    padding: 1.5rem;
+    position: relative;
+}
+
+.packages .box-container .box .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: .5rem;
+}
+
+.packages .box-container .box .image .packages_text {
+    position: absolute;
+    top: 2.5rem;
+    left: 2.5rem;
+    font-size: 1.4rem;
+    color: var(--primary-white);
+    background: rgba(0,0,0,.5);
+    border-radius: .5rem;
+    
+    padding: .5rem 1.5rem;  
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.packages .box-container .box .image i {
+    color: var(--primary-black);
+    font-weight: bold;
+}
+
+.packages .box-container .box .image h3 {
+    font-weight: 500;
+    padding-left: .5rem;
+}
+
+.packages .box-container .box .content {
+    padding: 1.5rem;
+    padding-top: 0;
+}
+
+.packages .box-container .box .content .price {
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: var(--primary-white);
+}
+
+.packages .box-container .box .content .price span{
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--secondary-black);
+    text-decoration: line-through;
+}
+
+
 /* Media Queries */
+@media (max-width: 1348px){
+    main {
+        height: 110vh;
+    }
+}
+
+@media (max-width: 1348px){
+    main {
+        height: 120vh;
+    }
+}
 
 @media (max-width: 1250px) {
     .home .right .text-right h3 {
@@ -371,6 +464,10 @@ main {
 
     .home .right .text-right h3 {
         font-size: 1rem;
+    }
+
+    .form-container form {
+        margin: 0 3rem;
     }
 } 
 
@@ -472,9 +569,21 @@ main {
     }
 }
 
+@media (max-width: 501px){
+    main {
+        height: 145vh;
+    }
+}
+
 @media (max-width: 320px) {
     main {
        background-image: 130%;
        overflow-x: hidden;
+    }
+}
+
+@media (max-width: 220px){
+    main {
+        height: 155vh;
     }
 }

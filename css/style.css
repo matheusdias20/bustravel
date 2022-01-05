@@ -45,7 +45,7 @@ html::-webkit-scrollbar-thumb {
 
 body {
     font-family: 'Baloo Bhaijaan 2', cursive;
-    background-color: #444c54;
+    background-color: #3a7a82;
 }
 
 .heading {
@@ -62,22 +62,23 @@ body {
     padding: .8rem 3rem;
     font-size: 1.7rem;
     color: var(--primary-white);
-    background-color: #0f1313;
+    background-color: var(--primary-black);
     border-radius: .5rem;
 
     cursor: pointer;
 }
 
 .btn:hover {
-    letter-spacing: .2rem;
+    background-color: #123e38;
 }
 
 main {
-    height: 100vh;
-    background-image: url("../img/main2.jpg");
+    height: 130vh;
+    background-image: url("../img/main3.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 
+    opacity: 0.7;
 }
 
 .header {
@@ -276,11 +277,11 @@ main {
 
     padding-right: 2rem;
     padding-left: 2rem;
-    background: #e0e0e04b;
+    background: #e0e0e0b9;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 
-    color: var(--primary-white);
+    color: var(--primary-black);
 }
 
 .home .right .text-right h3 {
@@ -409,10 +410,6 @@ main {
     justify-content: center;
 }
 
-.packages .box-container .box .image i {
-    color: var(--primary-black);
-    font-weight: bold;
-}
 
 .packages .box-container .box .image h3 {
     font-weight: 500;
@@ -437,13 +434,123 @@ main {
     text-decoration: line-through;
 }
 
+/* Reasons */
+
+.reasons {
+    margin: 5rem 0;
+    padding: 10rem 0;
+    background-color: #4c96a2;
+}
+
+.reasons .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+    margin: 0 2rem;
+}
+
+.reasons .box-container .box {
+    background: #e0e0e03a;
+    border-radius: .5rem;
+
+    position: relative;
+    padding: 2rem;
+}
+
+.reasons .box-container .box span {
+    position: absolute;
+    top: .5rem; 
+    right: 2rem;
+    color: var(--primary-black);
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+.reasons .box-container .box i {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-gray);
+    background-color: #4c96a2;
+    border-radius: 50%;
+    margin-bottom: .5rem;
+}
+
+.reasons .box-container .box h3 {
+    color: var(--primary-black);
+    font-size:  2.3rem;
+    padding: .7rem 0;
+}
+
+.reasons .box-container .box p {
+    color: var(--primary-black);
+    font-size: 1.5rem;
+    line-height: 1.8;
+}
+
+/* About */
+.about .text-about {
+    text-align: center;
+    color: var(--primary-black);
+    margin: 0 15rem;
+}
+
+.about .text-about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.about .text-about p {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+    font-size: 700;
+}
+
+/* Footer */
+footer {
+    background-color: #202b29;
+}
+
+
+.footer .box-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 0;
+}
+
+.footer .box-container .box h3 {
+    font-size: 2rem;
+    color: var(--primary-white);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a,
+.footer .box-container .box span {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--primary-white);
+
+    cursor: pointer;
+}
+
+.footer .box-container .box a:hover {
+    color: #80d1db;
+}
+
+.footer .box-container .box a i {
+    padding-right: .5rem;
+    padding-top: .5rem;
+}
 
 /* Media Queries */
-@media (max-width: 1348px){
-    main {
-        height: 110vh;
+@media (min-width: 1400px) {
+        main {
+        height: 100vh;
     }
 }
+
 
 @media (max-width: 1348px){
     main {
@@ -482,6 +589,10 @@ main {
 
     .header {
         padding: 1.5rem 2rem;
+    }
+
+    .about .text-about {
+        margin: 0 10rem;
     }
 }
 
@@ -556,6 +667,19 @@ main {
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
     }
+
+    
+    .about .text-about {
+        margin: 0 5rem;
+    }
+
+    .footer .box-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        margin: auto 2rem;
+        gap: 2rem;
+    }
+
 
 }
 
